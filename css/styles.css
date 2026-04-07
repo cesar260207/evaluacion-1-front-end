@@ -1,130 +1,144 @@
-:root {
-    --primary: #2E1A47;
-    --accent: #F2B705;
-    --white: #FFFFFF;
-
-    --user: #007BFF;
-    --coach: #28a745;
-    --admin: #dc3545;
-}
-
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* COLORES */
+:root {
+    --primary: #2E1A47; /* morado */
+    --accent: #F2B705; /* dorado */
+    --white: #FFFFFF;
+
+    --user: #007BFF;
+    --coach: #28A745;
+    --admin: #C0392B;
+}
+
+/* BODY */
 body {
-    font-family: Arial, sans-serif;
     background: #f5f5f5;
 }
 
 /* HEADER */
 .header {
-    background: var(--primary);
-    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    background: var(--primary);
+    color: white;
 }
 
-.logo {
-    height: 50px;
-}
-
-nav a {
-    color: var(--white);
+.header nav a {
     margin-left: 15px;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--accent);
+/* COLORES POR ROL */
+.header.user {
+    background: var(--user);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.header.coach {
+    background: var(--coach);
 }
 
-/* SECCIONES */
-section {
-    padding: 40px 20px;
-    text-align: center;
+.header.admin {
+    background: var(--admin);
 }
+
+/* LOGO */
+.logo {
+    height: 40px;
+}
+
+/* LOGIN */
 .login-container {
     width: 300px;
-    margin: 100px auto;
-    padding: 20px;
+    margin: 80px auto;
+    padding: 25px;
     background: white;
-    text-align: center;
     border-radius: 10px;
+    text-align: center;
 }
 
+.login-container h2 {
+    margin-bottom: 15px;
+}
+
+/* INPUTS */
 .login-container input {
     width: 100%;
-    margin: 10px 0;
     padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* BOTÓN PRINCIPAL */
 .login-container button {
     width: 100%;
     padding: 10px;
     background: var(--primary);
     color: white;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.login-container button:hover {
+    background: var(--accent);
+}
+
+/* ACCESO RÁPIDO */
+.roles {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.roles button {
+    padding: 10px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.roles button:hover {
+    background: var(--accent);
+}
+
+/* LINKS */
 .links {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
+
+.links a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* DASHBOARD */
 .dashboard {
     display: flex;
     gap: 20px;
     padding: 20px;
 }
 
+/* CARDS */
 .card {
     background: white;
     padding: 20px;
     flex: 1;
     border-radius: 10px;
-}
-
-/* COLOR USUARIO */
-.header.user {
-    background: var(--user);
-}
-/* COLOR COACH */
-.header.coach {
-    background: var(--coach);
-}
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    background-image: none; /* 🔥 esto elimina la imagen */
-}
-/* COLOR ADMIN */
-.header.admin {
-    background: var(--admin);
-}
-.roles {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.roles button {
-    flex: 1;
-    padding: 8px;
-    background: gray;
-    color: white;
-    border: none;
-    border-radius: 5px;
 }

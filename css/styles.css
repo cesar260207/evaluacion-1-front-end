@@ -114,3 +114,17 @@ body {
 .header.admin {
     background: var(--admin);
 }
+.roles {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.roles button {
+    flex: 1;
+    padding: 8px;
+    background: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
